@@ -13,5 +13,5 @@ alias: {
 },
 
 },
-base: '/tsholofelo-technical-school-site/',
+base: '/qr-code-linker/'
 })

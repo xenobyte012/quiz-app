@@ -1,8 +1,8 @@
 {
-  "name": "tsholofelo-technical-school-site",
+  "name": "qr-code-linker",
   "private": true,
   "version": "0.0.0",
-    "homepage": "https://xenobyte012.github.io/tsholofelo-technical-school-site",
+    "homepage": "https://xenobyte012.github.io/qr-code-linker",
   "type": "module",
   "scripts": {
   "dev": "vite",
