@@ -13,5 +13,5 @@ alias: {
 },
 
 },
-base: '/quize-app/'
+base: '/quiz-app/'
 })

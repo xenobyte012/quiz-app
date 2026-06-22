@@ -9,7 +9,7 @@ import "@fontsource/geist-mono/700.css";
 import App from "./App.jsx";
 
 createRoot(document.getElementById("root")).render(
-  <BrowserRouter basename="/quize-app">
+  <BrowserRouter basename="/quiz-app">
     <App />
   </BrowserRouter>,
 );
