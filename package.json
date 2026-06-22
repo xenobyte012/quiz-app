@@ -2,7 +2,7 @@
   "name": "qr-code-linker",
   "private": true,
   "version": "0.0.0",
-    "homepage": "https://xenobyte012.github.io/qr-code-linker",
+    "homepage": "https://xenobyte012.github.io/quize-app",
   "type": "module",
   "scripts": {
   "dev": "vite",

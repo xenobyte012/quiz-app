@@ -13,5 +13,5 @@ alias: {
 },
 
 },
-base: '/qr-code-linker/'
+base: '/quize-app/'
 })
