@@ -1,5 +1,6 @@
 import express from "express";
 import path from "path";
+import cors from "cors";
 import dashboardRoutes from "./routes/dashboard.route.js";
 import quizRoutes from "./routes/quiz.route.js";
 
