@@ -10,6 +10,12 @@ const app = express();
 
 app.use(express.json())
 
+app.use(
+  cors({
+    origin: ["https://quiz-ek4hethmb-xenobyte012s-projects.vercel.app"],
+    credentials: true,
+  }),
+);
 
 app.get("/api/v1/ping", (req, res) => {
   res.json({
