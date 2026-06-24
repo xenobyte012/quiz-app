@@ -10,6 +10,12 @@ const app = express();
 
 app.use(express.json())
 
+
+app.get("/api/v1/ping", (req, res) => {
+  res.json({
+    message: "Server is running",
+  });
+});
 // routes import 
 import userRouter from "./routes/user.route.js"
 
