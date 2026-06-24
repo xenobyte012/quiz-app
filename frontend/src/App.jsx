@@ -6,7 +6,7 @@ import Home from "./pages/Home"
 import Register from "./pages/Register"
 import StudentPortal from "./pages/StudentDashboard";
 import CreateQuiz from "./pages/CreateQuiz";
-
+import TeacherAnalytics from "./pages/TeacherAnalytics";
 
 function App() {
   return (
@@ -14,12 +14,10 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route
-        path="/teacher-dashboard"
-        element={<TeacherDashboard />}
-      />
-      <Route path="/create-quiz" element={ <CreateQuiz /> } /> 
-      <Route path="student-dashboard" element={ <StudentPortal /> } /> 
+      <Route path="/teacher-dashboard" element={<TeacherDashboard />} />
+      <Route path="/create-quiz" element={<CreateQuiz />} />
+      <Route path="student-dashboard" element={<StudentPortal />} />
+      <Route path="/teacher-analytics" element={<TeacherAnalytics />} />
     </Routes>
   );
 }
