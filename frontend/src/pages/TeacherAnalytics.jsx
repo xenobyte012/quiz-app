@@ -88,7 +88,7 @@ export default function TeacherAnalytics() {
   const fetchAnalytics = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`/api/v1/analytics/overview?range=${range}`);
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/analytics/overview?range=${range}`);
       const data = await response.json();
 
       if (!response.ok) {

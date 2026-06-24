@@ -64,16 +64,19 @@ export default function CreateQuiz() {
     try {
       const user = JSON.parse(localStorage.getItem("user"));
 
-      const response = await fetch("/api/v1/quiz/create", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/v1/quiz/create`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            ...quiz,
+            teacherId: user?.id,
+          }),
         },
-        body: JSON.stringify({
-          ...quiz,
-          teacherId: user?.id,
-        }),
-      });
+      );
 
       const data = await response.json();
 

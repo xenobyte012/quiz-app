@@ -36,7 +36,7 @@ export default function StudentPortal() {
   const fetchQuizzes = async (studentId) => {
     try {
       setLoading(true);
-      const response = await fetch(`/api/v1/quiz/student/${studentId}`);
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/quiz/student/${studentId}`);
       const data = await response.json();
 
       if (response.ok) {

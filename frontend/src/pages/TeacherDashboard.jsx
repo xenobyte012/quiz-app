@@ -42,7 +42,7 @@ export default function TeacherDashboard() {
   const fetchLeaderboard = async () => {
     try {
       setLoadingBoard(true);
-      const response = await fetch("/api/v1/dashboard/leaderboard");
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/dashboard/leaderboard`);
       const data = await response.json();
 
       if (response.ok) {
