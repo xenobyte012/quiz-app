@@ -11,9 +11,26 @@ const app = express();
 
 app.use(express.json())
 
+
+const allowedOrigins = [
+  "https://quiz-app-silk-seven-86.vercel.app", // Your main production domain
+  "http://localhost:5173"                       // Local development tracking
+];
+
 app.use(
   cors({
-    origin: ["https://quiz-ek4hethmb-xenobyte012s-projects.vercel.app"],
+    origin: function (origin, callback) {
+
+      if (!origin) return callback(null, true);
+
+      const isVercelBranch = origin.endsWith(".vercel.app") && origin.includes("xenobyte012s-projects");
+      
+      if (allowedOrigins.indexOf(origin) !== -1 || isVercelBranch) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
   }),
 );
