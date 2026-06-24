@@ -18,5 +18,5 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: process.env.VITE_API_URL || "/quiz-app",
+  base: "/",
 });
