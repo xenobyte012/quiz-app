@@ -54,7 +54,9 @@ export default function StudentPortal() {
   const fetchResults = async (studentId) => {
     try {
       setLoadingResults(true);
-      const response = await fetch(`/api/v1/result/student/${studentId}`);
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/api/v1/result/student/${studentId}`,
+      );
       const data = await response.json();
 
       if (response.ok) {
@@ -84,7 +86,7 @@ export default function StudentPortal() {
       const user = JSON.parse(localStorage.getItem("user") || "{}");
       const studentId = user.id || user._id;
 
-      const response = await fetch("/api/v1/result/submit", {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/result/submit`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
