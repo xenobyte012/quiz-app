@@ -26,7 +26,7 @@ export default function TeacherDashboard() {
   const fetchSummary = async () => {
     try {
       setLoading(true);
-      const response = await fetch("/api/v1/dashboard/summary");
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/v1/dashboard/summary`);
       const data = await response.json();
 
       if (response.ok) {
